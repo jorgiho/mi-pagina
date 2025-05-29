@@ -26,12 +26,12 @@ nav a {
   font-weight: bold;
 }
 
-/* Contenedor de productos */
+/* Contenedor de productos como cuadrícula */
 .productos {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1.5rem;
+  padding: 2rem;
   justify-content: center;
 }
 
@@ -40,7 +40,6 @@ nav a {
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 1rem;
-  max-width: 250px;
   text-align: center;
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -76,11 +75,16 @@ footer {
   padding: 1rem;
 }
 
-/* Diseño responsivo */
+/* Diseño responsivo para pantallas pequeñas */
 @media (max-width: 600px) {
+  .productos {
+    grid-template-columns: 1fr;
+  }
+
   .producto {
-    max-width: 90%;
+    max-width: 100%;
   }
 }
+
 
 
