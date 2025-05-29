@@ -1,9 +1,12 @@
+/* Estilo general */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #fefefe;
 }
 
+/* Encabezado */
 header {
   background-color: #222;
   color: white;
@@ -11,6 +14,7 @@ header {
   text-align: center;
 }
 
+/* Navegación */
 nav {
   margin-top: 0.5rem;
 }
@@ -22,20 +26,23 @@ nav a {
   font-weight: bold;
 }
 
+/* Contenedor de productos */
 .productos {
   display: flex;
   flex-wrap: wrap;
   padding: 2rem;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: center;
 }
 
+/* Tarjeta de producto */
 .producto {
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 1rem;
   max-width: 250px;
   text-align: center;
+  background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -45,6 +52,7 @@ nav a {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Imagen del producto */
 .producto img {
   width: 100%;
   height: auto;
@@ -52,6 +60,7 @@ nav a {
   margin-bottom: 0.5rem;
 }
 
+/* Sección de contacto */
 .contacto {
   background-color: #f5f5f5;
   padding: 2rem;
@@ -59,10 +68,19 @@ nav a {
   border-top: 2px solid #ccc;
 }
 
+/* Pie de página */
 footer {
   background-color: #222;
   color: white;
   text-align: center;
   padding: 1rem;
 }
+
+/* Diseño responsivo */
+@media (max-width: 600px) {
+  .producto {
+    max-width: 90%;
+  }
+}
+
 
