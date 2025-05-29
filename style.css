@@ -11,10 +11,15 @@ header {
   text-align: center;
 }
 
+nav {
+  margin-top: 0.5rem;
+}
+
 nav a {
   margin: 0 1rem;
   color: #fff;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .productos {
@@ -31,18 +36,27 @@ nav a {
   padding: 1rem;
   max-width: 250px;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.producto:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .producto img {
   width: 100%;
   height: auto;
   border-radius: 4px;
+  margin-bottom: 0.5rem;
 }
 
 .contacto {
   background-color: #f5f5f5;
   padding: 2rem;
   text-align: center;
+  border-top: 2px solid #ccc;
 }
 
 footer {
@@ -51,3 +65,4 @@ footer {
   text-align: center;
   padding: 1rem;
 }
+
