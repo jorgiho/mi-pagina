@@ -17,6 +17,7 @@ header {
 /* Navegación */
 nav {
   margin-top: 0.5rem;
+  position: relative;
 }
 
 nav a {
@@ -28,9 +29,9 @@ nav a {
 
 /* Contenedor de productos como cuadrícula */
 .productos {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   padding: 2rem;
   justify-content: center;
 }
@@ -44,6 +45,7 @@ nav a {
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: calc(20% - 20px); /* Ajusta el tamaño de los productos */
 }
 
 .producto:hover {
@@ -53,9 +55,9 @@ nav a {
 
 /* Imagen del producto */
 .producto img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  border-radius: 4px;
+  border-radius: 10px;
   margin-bottom: 0.5rem;
 }
 
@@ -84,6 +86,24 @@ footer {
   .producto {
     max-width: 100%;
   }
+}
+
+/* Estilo para el menú desplegable */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 5px;
+  top: 100%; /* Aparece justo debajo del enlace "Productos" */
+  left: 0;
+  z-index: 1000;
+}
+
+.dropdown:hover + .dropdown-menu,
+.dropdown-menu:hover {
+  display: block;
 }
 
 
